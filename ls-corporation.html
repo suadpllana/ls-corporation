@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LS Corporation – Website me Qira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #f5f7f6;
+    --navy-mid: #edf2f0;
+    --navy-light: #e2ebe8;
+    --slate: #7a9490;
+    --slate-light: #4a6b65;
+    --white: #1a2e2b;
+    --electric: #0d1f1c;
+    --accent: #0d9488;
+    --accent2: #0f766e;
+    --glow: rgba(13,148,136,0.18);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 6vw;
+    background: rgba(245,247,246,0.85);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(13,148,136,0.12);
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 1.35rem; letter-spacing: -0.02em;
+    color: var(--white);
+  }
+  .logo span { color: var(--accent); }
+  nav ul { list-style: none; display: flex; gap: 2.5rem; }
+  nav ul a { text-decoration: none; color: var(--slate-light); font-size: 0.88rem; transition: color .2s; }
+  nav ul a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--accent); color: #fff; border: none;
+    padding: 0.65rem 1.5rem; border-radius: 100px;
+    font-size: 0.88rem; font-family: 'DM Sans', sans-serif;
+    cursor: pointer; transition: opacity .2s; font-weight: 500;
+  }
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 9rem 6vw 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(13,148,136,0.10) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 80% 80%, rgba(15,118,110,0.07) 0%, transparent 60%);
+  }
+  /* Grid lines */
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(13,148,136,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(13,148,136,0.07) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 680px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(13,148,136,0.10); border: 1px solid rgba(13,148,136,0.25);
+    padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 2rem;
+    font-size: 0.8rem; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase;
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero-badge::before { content: '●'; font-size: 0.5rem; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  h1 {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    line-height: 1.08; letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+  h1 .highlight {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-sub {
+    font-size: 1.1rem; color: var(--slate-light); line-height: 1.7;
+    max-width: 520px; margin-bottom: 2.5rem;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.8s 0.3s ease both; }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff; padding: 0.9rem 2rem; border-radius: 100px;
+    font-size: 1rem; font-weight: 500; font-family: 'DM Sans', sans-serif;
+    border: none; cursor: pointer; transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 8px 32px rgba(13,148,136,0.30);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(13,148,136,0.45); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    border: 1px solid rgba(26,46,43,0.2);
+    padding: 0.9rem 2rem; border-radius: 100px;
+    font-size: 1rem; font-weight: 400; font-family: 'DM Sans', sans-serif;
+    cursor: pointer; transition: border-color .2s, background .2s;
+  }
+  .btn-outline:hover { border-color: var(--accent); background: rgba(13,148,136,0.08); }
+
+  .hero-stats {
+    display: flex; gap: 3rem; margin-top: 4rem;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+  .stat-num {
+    font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800;
+    color: var(--white);
+  }
+  .stat-label { font-size: 0.82rem; color: var(--slate); margin-top: 0.2rem; }
+
+  /* 3D orb decoration */
+  .hero-orb {
+    position: absolute; right: 5vw; top: 50%; transform: translateY(-50%);
+    width: min(420px, 40vw); aspect-ratio: 1;
+    z-index: 1;
+    animation: float 6s ease-in-out infinite;
+  }
+  .orb-inner {
+    width: 100%; height: 100%; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%,
+      rgba(13,148,136,0.45) 0%,
+      rgba(15,118,110,0.25) 40%,
+      rgba(245,247,246,0.6) 70%);
+    border: 1px solid rgba(13,148,136,0.2);
+    box-shadow: 0 0 120px rgba(13,148,136,0.15), inset 0 0 80px rgba(15,118,110,0.08);
+    position: relative;
+  }
+  .orb-ring {
+    position: absolute; inset: -15px; border-radius: 50%;
+    border: 1px solid rgba(13,148,136,0.12);
+  }
+  .orb-ring:nth-child(2) { inset: -35px; border-color: rgba(13,148,136,0.07); }
+  .orb-ring:nth-child(3) { inset: -60px; border-color: rgba(13,148,136,0.04); }
+  @keyframes float { 0%,100%{transform:translateY(-50%) translateX(0)} 50%{transform:translateY(-53%) translateX(-10px)} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+  /* SECTION COMMON */
+  section { padding: 6rem 6vw; }
+  .section-label {
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    letter-spacing: -0.03em; line-height: 1.15;
+    margin-bottom: 1.2rem;
+  }
+  .section-sub { color: var(--slate-light); font-size: 1.05rem; line-height: 1.7; max-width: 560px; }
+
+  /* WHY US */
+  #why { background: var(--navy-mid); }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin-top: 3.5rem;
+  }
+  .why-card {
+    background: rgba(13,148,136,0.04);
+    border: 1px solid rgba(13,148,136,0.12);
+    border-radius: 20px; padding: 2rem;
+    transition: border-color .3s, transform .3s;
+    position: relative; overflow: hidden;
+  }
+  .why-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    opacity: 0; transition: opacity .3s;
+  }
+  .why-card:hover { border-color: rgba(13,148,136,0.4); transform: translateY(-4px); }
+  .why-card:hover::before { opacity: 1; }
+  .why-icon {
+    width: 52px; height: 52px; border-radius: 14px;
+    background: rgba(13,148,136,0.08); border: 1px solid rgba(13,148,136,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; margin-bottom: 1.3rem;
+  }
+  .why-card h3 {
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+  .why-card p { color: var(--slate-light); font-size: 0.93rem; line-height: 1.65; }
+
+  /* HOW */
+  #how { background: var(--navy); }
+  .steps {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0; margin-top: 3.5rem; position: relative;
+  }
+  .step {
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(13,148,136,0.1);
+    position: relative;
+    transition: background .3s;
+  }
+  .step:hover { background: rgba(13,148,136,0.05); }
+  .step-num {
+    font-family: 'Syne', sans-serif; font-size: 4rem; font-weight: 800;
+    color: rgba(13,148,136,0.15); line-height: 1;
+    margin-bottom: 1rem; display: block;
+  }
+  .step h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 0.7rem; }
+  .step p { color: var(--slate-light); font-size: 0.92rem; line-height: 1.6; }
+  .step-arrow {
+    position: absolute; right: -12px; top: 50%; transform: translateY(-50%);
+    z-index: 2; width: 24px; height: 24px;
+    background: var(--navy); border: 1px solid rgba(13,148,136,0.3);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: var(--accent); font-size: 0.7rem;
+  }
+
+  /* PRICING */
+  #pricing { background: var(--navy-mid); }
+  .pricing-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.5rem; margin-top: 3.5rem; align-items: start;
+  }
+  .price-card {
+    border-radius: 24px; padding: 2.2rem;
+    border: 1px solid rgba(13,148,136,0.12);
+    background: rgba(13,148,136,0.02);
+    transition: transform .3s;
+  }
+  .price-card:hover { transform: translateY(-5px); }
+  .price-card.featured {
+    background: linear-gradient(145deg, rgba(13,148,136,0.10), rgba(15,118,110,0.06));
+    border-color: rgba(13,148,136,0.35);
+    position: relative; overflow: hidden;
+  }
+  .price-card.featured::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+  }
+  .price-badge {
+    display: inline-block; background: var(--accent);
+    color: #fff; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+  .price-name {
+    font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600;
+    color: var(--slate-light); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .price-amount {
+    font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800;
+    letter-spacing: -0.04em; line-height: 1;
+  }
+  .price-amount span { font-size: 1.2rem; font-weight: 400; color: var(--slate); vertical-align: super; }
+  .price-period { color: var(--slate); font-size: 0.85rem; margin-top: 0.3rem; margin-bottom: 1.8rem; }
+  .price-features { list-style: none; margin-bottom: 2rem; }
+  .price-features li {
+    padding: 0.55rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.9rem; color: var(--slate-light);
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .price-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+  .price-features li.no::before { content: '✕'; color: rgba(26,46,43,0.2); }
+  .price-features li.no { color: rgba(26,46,43,0.25); }
+
+  /* FAQ */
+  #faq { background: var(--navy); }
+  .faq-list { margin-top: 3.5rem; max-width: 760px; }
+  .faq-item {
+    border-bottom: 1px solid rgba(13,148,136,0.12); overflow: hidden;
+  }
+  .faq-q {
+    width: 100%; background: none; border: none; text-align: left;
+    padding: 1.5rem 0; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500;
+    color: var(--white); display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  }
+  .faq-q .icon { color: var(--accent); font-size: 1.2rem; transition: transform .3s; flex-shrink: 0; }
+  .faq-q.open .icon { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0; overflow: hidden; transition: max-height .4s ease;
+    color: var(--slate-light); font-size: 0.93rem; line-height: 1.75;
+  }
+  .faq-a.open { max-height: 300px; padding-bottom: 1.5rem; }
+
+  /* CTA */
+  #cta {
+    background: var(--navy-mid);
+    text-align: center; padding: 7rem 6vw;
+  }
+  .cta-box {
+    max-width: 700px; margin: 0 auto;
+    background: linear-gradient(135deg, rgba(13,148,136,0.08), rgba(15,118,110,0.05));
+    border: 1px solid rgba(13,148,136,0.25);
+    border-radius: 28px; padding: 4rem 3rem;
+  }
+  .cta-box h2 {
+    font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem;
+  }
+  .cta-box p { color: var(--slate-light); margin-bottom: 2rem; font-size: 1.05rem; }
+
+  /* FOOTER */
+  footer {
+    padding: 2.5rem 6vw;
+    border-top: 1px solid rgba(13,148,136,0.1);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    color: var(--slate); font-size: 0.85rem;
+  }
+  footer a { color: var(--slate); text-decoration: none; }
+  footer a:hover { color: var(--white); }
+
+  @media (max-width: 768px) {
+    .hero-orb { display: none; }
+    nav ul { display: none; }
+    .hero-stats { gap: 2rem; }
+    .steps { grid-template-columns: 1fr; }
+    .step-arrow { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">LS<span>Corp</span></div>
+  <ul>
+    <li><a href="#why">Pse ne?</a></li>
+    <li><a href="#how">Si funksionon</a></li>
+    <li><a href="#pricing">Çmimet</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Fillo Tani</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Website Rental për Bizneset Shqiptare</div>
+    <h1>Website Profesional.<br><span class="highlight">Kosto Fillestare: 0€.</span></h1>
+    <p class="hero-sub">LS Corporation ndërton, menaxhon dhe optimizon faqen tuaj web. Ju paguani vetëm abonimin mujor — pa investim fillestar, pa surpriza.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Shiko Pakotet →</button>
+      <button class="btn-outline" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">Si funksionon?</button>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">0€</div>
+        <div class="stat-label">Kosto fillestare</div>
+      </div>
+      <div>
+        <div class="stat-num">48h</div>
+        <div class="stat-label">Dil online</div>
+      </div>
+      <div>
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Mirëmbajtje</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-orb">
+    <div class="orb-inner">
+      <div class="orb-ring"></div>
+      <div class="orb-ring"></div>
+      <div class="orb-ring"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <p class="section-label">Avantazhet tona</p>
+  <h2 class="section-title">Pse të zgjedhësh<br>LS Corporation?</h2>
+  <p class="section-sub">Ne heqim barrierat tradicionale të dixhitalizimit — kosto të larta fillestare, agjenci jo-responsive, teknologji të komplikuar.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <h3>Kursim Real Parash</h3>
+      <p>Nuk paguan asgjë para se faqja juaj të jetë gati. Pa investim fillestar, pa faturë surprizë. Abonimi mujor mbulon gjithçka — dizajn, hosting, domain dhe mirëmbajtje.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🤖</div>
+      <h3>AI Bots të Integruar</h3>
+      <p>Çdo paketë vjen me chatbot inteligjent të integruar që i përgjigjet klientëve tuaj 24/7, mbledh lead-e dhe automatison komunikimin — pa kosto shtesë.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🛡️</div>
+      <h3>Mirëmbajtje Totale</h3>
+      <p>Ekipi ynë kujdeset për çdo detaj teknik: update-et, sigurinë, backup-et dhe performancën. Ju fokusoheni te biznesi, ne te teknologjia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <p class="section-label">Procesi ynë</p>
+  <h2 class="section-title">Gati Online në 3 Hapa</h2>
+  <p class="section-sub">Nuk duhet të kesh njohuri teknike. Procesi ynë është i thjeshtë dhe transparent.</p>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <h3>Zgjidh Dizajnin</h3>
+      <p>Shfleton koleksionin tonë të template-ve profesionale dhe zgjedh stilin që përkon me brandin tuaj. Mund të personalizosh ngjyrat, fontet dhe strukturën.</p>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <h3>Ne e Modifikojmë</h3>
+      <p>Ekipi ynë integron logon, tekstin, fotot dhe informacionin e biznesit tuaj. Ju shikoni një preview dhe bëni çdo ndryshim që dëshironi pa kosto shtesë.</p>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <h3>Dil Online</h3>
+      <p>Pas aprovimit tuaj, faqja publikon live brenda 48 orësh. Domain, hosting dhe SSL certifikata janë të gjitha të kujdesura prej nesh.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <p class="section-label">Pakotet tona</p>
+  <h2 class="section-title">Zgjidhje për Çdo Biznes</h2>
+  <p class="section-sub">Pa kontrata afatgjata. Mund ta ndryshosh ose anulosh abonimin çdo muaj.</p>
+  <div class="pricing-grid">
+
+    <div class="price-card">
+      <div class="price-name">Basic</div>
+      <div class="price-amount"><span>€</span>29</div>
+      <div class="price-period">/ muaj — Faturim mujor</div>
+      <ul class="price-features">
+        <li>Deri 5 faqe</li>
+        <li>Domain .al ose .com</li>
+        <li>Hosting & SSL</li>
+        <li>AI Chatbot Basic</li>
+        <li>Formë kontakti</li>
+        <li>Mirëmbajtje mujore</li>
+        <li class="no">E-Commerce</li>
+        <li class="no">Integrimi CRM</li>
+      </ul>
+      <button class="btn-outline" style="width:100%" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Zgjidh Basic</button>
+    </div>
+
+    <div class="price-card featured">
+      <div class="price-badge">Më popular</div>
+      <div class="price-name">Business</div>
+      <div class="price-amount"><span>€</span>59</div>
+      <div class="price-period">/ muaj — Faturim mujor</div>
+      <ul class="price-features">
+        <li>Deri 15 faqe</li>
+        <li>Domain .al ose .com</li>
+        <li>Hosting & SSL Premium</li>
+        <li>AI Chatbot i avancuar</li>
+        <li>Blog & Lajme</li>
+        <li>SEO Optimizim</li>
+        <li>Google Analytics</li>
+        <li class="no">E-Commerce</li>
+      </ul>
+      <button class="btn-primary" style="width:100%" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Zgjidh Business</button>
+    </div>
+
+    <div class="price-card">
+      <div class="price-name">Enterprise</div>
+      <div class="price-amount"><span>€</span>99</div>
+      <div class="price-period">/ muaj — Faturim mujor</div>
+      <ul class="price-features">
+        <li>Faqe të pakufizuara</li>
+        <li>Domain + Email biznes</li>
+        <li>Hosting Dedikuar</li>
+        <li>AI Chatbot + CRM</li>
+        <li>E-Commerce Shopify/WooCommerce</li>
+        <li>SEO + Analitikë të avancuar</li>
+        <li>Integrimi API</li>
+        <li>Support prioritar 24/7</li>
+      </ul>
+      <button class="btn-outline" style="width:100%" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Zgjidh Enterprise</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <p class="section-label">Pyetje të shpeshta</p>
+  <h2 class="section-title">Keni Pyetje?</h2>
+  <p class="section-sub">Këtu gjeni përgjigjet më të zakonshme. Nëse keni diçka tjetër, na kontaktoni.</p>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        A jam unë pronar i domain-it?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-a">
+        Domain-i regjistrohet në emrin tuaj dhe mbetet i juaji gjithmonë. Nëse vendosni të largoheni nga LS Corporation, domain-i do të transferohet tek ju plotësisht falas. Ne menaxhojmë rinovimet vjetore si pjesë e abonimit tuaj.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        A mund ta ndërpres abonimin kur të dua?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-a">
+        Po, absolutisht. Nuk ka kontrata afatgjata apo penalitete. Mund ta anulosh abonimin çdo muaj me 30 ditë njoftim paraprak. Ne do t'ju ndihmojmë të eksportoni të dhënat tuaja pa problem.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        A mund ta ndryshoj paketën në çdo kohë?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-a">
+        Po. Mund të ngritesh ose të ulesh në paketë çdo muaj, sipas nevojave të biznesit tuaj. Ndryshimi hyn në fuqi në ciklin e ardhshëm faturimi pa asnjë kosto shtesë.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Çfarë ndodh nëse faqja jonë ka probleme teknike?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-a">
+        Ekipi ynë i monitoron faqet 24/7. Nëse ka ndonjë problem, ne e adresojmë automatikisht pa qenë nevoja të na kontaktoni. Për paketat Business dhe Enterprise, koha e reagimit është brenda 2 orësh.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        A mund të bëj ndryshime në faqen time pas lansimit?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-a">
+        Po. Çdo paketë përfshin ndryshime mujore pa kosto shtesë (Basic: deri 3 ndryshime, Business: 8, Enterprise: të pakufizuara). Ndryshimet urgjente trajtohen brenda 24 orësh.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-box">
+    <h2>Gati të Filloni?</h2>
+    <p>Kontaktoni LS Corporation sot dhe merrni konsultën e parë falas. Faqja juaj mund të jetë online brenda 48 orësh.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <button class="btn-primary">Na Kontaktoni →</button>
+      <button class="btn-outline">Shiko Portfolio</button>
+    </div>
+    <p style="margin-top:1.5rem;font-size:0.82rem;color:var(--slate)">Nuk kërkohet kartë krediti · Pa kontratë · Anulo kur të duash</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">LS<span style="color:var(--accent)">Corp</span></div>
+  <span>© 2025 LS Corporation. Të gjitha të drejtat e rezervuara.</span>
+  <div style="display:flex;gap:1.5rem">
+    <a href="#">Politika e Privatësisë</a>
+    <a href="#">Termat e Shërbimit</a>
+    <a href="#">Kontakt</a>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  // close all
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.animation = 'fadeUp 0.7s ease both';
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.why-card, .step, .price-card, .faq-item').forEach(el => {
+  el.style.opacity = '0';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
