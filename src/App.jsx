@@ -41,7 +41,7 @@ export default function App() {
       <section id="hero">
         <div className="hero-bg"></div>
         <div className="hero-content">
-          <div className="hero-badge">Website Rental për Bizneset</div>
+          <div className="hero-badge">Website Rental për Shqiptare</div>
           <h1>Website Profesional.<br/><span className="highlight">Kosto Fillestare: 0€.</span></h1>
           <p className="hero-sub">LS Corporation ndërton, menaxhon dhe optimizon faqen tuaj web. Ju paguani vetëm abonimin mujor — pa investim fillestar, pa surpriza.</p>
           <div className="hero-actions">
