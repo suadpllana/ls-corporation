@@ -214,17 +214,60 @@ export default function App() {
         </div>
       </section>
 
-      <section id="cta">
-        <div className="cta-box">
-          <h2>Gati të Filloni?</h2>
-          <p>Kontaktoni LS Corporation sot dhe merrni konsultën e parë falas. Faqja juaj mund të jetë online brenda 48 orësh.</p>
-          <div style={{display:'flex',gap:'1rem',justifyContent:'center',flexWrap:'wrap'}}>
-            <button className="btn-primary">Na Kontaktoni →</button>
-            <button className="btn-outline">Shiko Portfolio</button>
+{/* Contact Section */}
+<section id="kontakt">
+  <div className="contact-container">
+    <div className="contact-info">
+      <p className="section-label">Na kontaktoni</p>
+      <h2 className="section-title">Gati për të nisur projektin tënd?</h2>
+      <p className="section-sub">
+        Na dërgoni një mesazh dhe ekipi ynë do t'ju kontaktojë brenda 24 orëve për një konsultim falas.
+      </p>
+
+      <div className="contact-methods">
+        <div className="method-item">
+          <div className="method-icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:info@pixelforge.al">info@pixelforge.al</a>
           </div>
-          <p style={{marginTop:'1.5rem',fontSize:'0.82rem',color:'var(--slate)'}}>Nuk kërkohet kartë krediti · Pa kontratë · Anulo kur të duash</p>
         </div>
-      </section>
+        <div className="method-item">
+          <div className="method-icon">📞</div>
+          <div>
+            <h4>Telefon</h4>
+            <a href="tel:+355691234567">+355 69 123 4567</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="contact-form-wrapper">
+      <form className="contact-form">
+        <div className="input-group">
+          <input type="text" placeholder="Emri juaj *" required />
+        </div>
+        <div className="input-group">
+          <input type="email" placeholder="Email-i juaj *" required />
+        </div>
+        <div className="input-group">
+          <select defaultValue="">
+            <option value="" disabled>Zgjidhni një shërbim</option>
+            <option>Web Rental (Abonim)</option>
+            <option>E-Commerce</option>
+            <option>Custom Development</option>
+          </select>
+        </div>
+        <div className="input-group">
+          <textarea placeholder="Përshkruani shkurtimisht kërkesën tuaj..." rows="4"></textarea>
+        </div>
+        <button type="submit" className="btn-primary">
+          Dërgo Mesazhin →
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
 
       <footer>
         <div className="logo">LS<span style={{color:'var(--accent)'}}>Corp</span></div>
