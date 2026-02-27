@@ -45,7 +45,7 @@ export default function App() {
           <h1>Website Profesional.<br/><span className="highlight">Kosto Fillestare: 0€.</span></h1>
           <p className="hero-sub">LS Corporation ndërton, menaxhon dhe optimizon faqen tuaj web. Ju paguani vetëm abonimin mujor — pa investim fillestar, pa surpriza.</p>
           <div className="hero-actions">
-            <button className="btn-primary" onClick={() => document.getElementById('pricing').scrollIntoView({behavior:'smooth'})}>Shiko Pakotet →</button>
+            <button className="btn-primary" onClick={() => document.getElementById('pricing').scrollIntoView({behavior:'smooth'})}>Shiko Pakot →</button>
             <button className="btn-outline" onClick={() => document.getElementById('how').scrollIntoView({behavior:'smooth'})}>Si funksionon?</button>
           </div>
           <div className="hero-stats">
