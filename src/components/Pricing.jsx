@@ -7,7 +7,7 @@ const NO_BIZ   = [7]
 export default function Pricing({ t, onSelectPackage }) {
   const pick = (name) => {
     onSelectPackage(name)
-    scrollTo('kontakt')
+    scrollTo('contact')
   }
   return (
     <section id="pricing">

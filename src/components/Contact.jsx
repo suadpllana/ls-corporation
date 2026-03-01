@@ -46,7 +46,7 @@ export default function Contact({ t, selectedPackage, setSelectedPackage }) {
   }
 
   return (
-    <section id="kontakt">
+    <section id="contact">
       <div className="contact-container">
 
         {/* ── Left info column ── */}

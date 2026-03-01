@@ -10,6 +10,7 @@ export default function Navbar({ t, lang, setLang }) {
         <li><a href="#how">{t.nav.how}</a></li>
         <li><a href="#pricing">{t.nav.pricing}</a></li>
         <li><a href="#faq">{t.nav.faq}</a></li>
+        <li><a href="#contact">{t.nav.contact}</a></li>
       </ul>
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
         <button

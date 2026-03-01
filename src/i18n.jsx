@@ -3,7 +3,7 @@ import React from "react"
 
 const T = {
   en: {
-    nav: { why: 'Why us?', how: 'How it works', pricing: 'Pricing', faq: 'FAQ', cta: 'Get Started' },
+    nav: { why: 'Why us?', how: 'How it works', pricing: 'Pricing', faq: 'FAQ', cta: 'Get Started',contact: 'Contact' },
     hero: {
       badge: 'Website Rental for Businesses',
       h1a: 'Professional Website.',
@@ -71,11 +71,11 @@ const T = {
       successTitle: 'Message sent!', successSub: 'We will contact you within 24 hours.',
       sendAnother: 'Send another message', error: 'An error occurred. Please try again.',
     },
-    footer: { rights: '© 2025 LS Corporation. All rights reserved.', privacy: 'Privacy Policy', terms: 'Terms of Service', contact: 'Contact' },
+    footer: { rights: '© 2026 LS Corporation. All rights reserved.', privacy: 'Privacy Policy', terms: 'Terms of Service', contact: 'Contact' },
   },
 
   sq: {
-    nav: { why: 'Pse ne?', how: 'Si funksionon', pricing: 'Çmimet', faq: 'FAQ', cta: 'Fillo Tani' },
+    nav: { why: 'Pse ne?', how: 'Si funksionon', pricing: 'Çmimet', faq: 'FAQ', cta: 'Fillo Tani', contact: 'Kontakt' },
     hero: {
       badge: 'Website Rental për Biznese Shqiptare',
       h1a: 'Website Profesional.',
@@ -143,7 +143,7 @@ const T = {
       successTitle: 'Mesazhi u dërgua!', successSub: "Do t'ju kontaktojmë brenda 24 orëve.",
       sendAnother: 'Dërgo mesazh tjetër', error: 'Ndodhi një gabim. Ju lutemi provoni përsëri.',
     },
-    footer: { rights: '© 2025 LS Corporation. Të gjitha të drejtat e rezervuara.', privacy: 'Politika e Privatësisë', terms: 'Termat e Shërbimit', contact: 'Kontakt' },
+    footer: { rights: '© 2026 LS Corporation. Të gjitha të drejtat e rezervuara.', privacy: 'Politika e Privatësisë', terms: 'Termat e Shërbimit', contact: 'Kontakt' },
   },
 }
 
