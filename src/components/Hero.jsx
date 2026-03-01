@@ -17,7 +17,7 @@ export default function Hero({ t }) {
           <button className="btn-outline" onClick={() => scrollTo('how')}>{t.hero.btn2}</button>
         </div>
         <div className="hero-stats">
-          <div><div className="stat-num">0€</div><div className="stat-label">{t.hero.s1}</div></div>
+          <div><div className="stat-num">100€</div><div className="stat-label">{t.hero.s1}</div></div>
           <div><div className="stat-num">48h</div><div className="stat-label">{t.hero.s2}</div></div>
           <div><div className="stat-num">24/7</div><div className="stat-label">{t.hero.s3}</div></div>
         </div>
