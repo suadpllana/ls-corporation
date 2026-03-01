@@ -78,7 +78,7 @@ const T = {
     nav: { why: 'Pse ne?', how: 'Si funksionon', pricing: 'Çmimet', faq: 'FAQ', cta: 'Fillo Tani' },
     hero: {
       badge: 'Website Rental për Biznese Shqiptare',
-      h1a: 'Website Profesional.',
+      h1a: 'Website Proffesional.',
       h1b: 'Kosto Fillestare: 100€.',
       sub: 'LS Corporation ndërton, menaxhon dhe optimizon faqen tuaj web. Ju paguani vetëm abonimin mujor — pa investim fillestar, pa surpriza.',
       btn1: 'Shiko Pakot →',
