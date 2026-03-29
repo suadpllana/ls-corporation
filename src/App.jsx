@@ -10,7 +10,7 @@ import Contact     from './components/Contact'
 import Footer      from './components/Footer'
 
 export default function App() {
-  const [lang, setLang]                   = useState('sq')
+  const [lang, setLang]                   = useState('en')
   const [selectedPackage, setSelectedPackage] = useState('')
   const t = T[lang]
 

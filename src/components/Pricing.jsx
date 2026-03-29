@@ -19,7 +19,7 @@ export default function Pricing({ t, onSelectPackage }) {
         {/* Basic */}
         <div className="price-card">
           <div className="price-name">Basic</div>
-          <div className="price-amount"><span>€</span>39</div>
+          <div className="price-amount"><span>€</span>50</div>
           <div className="price-period">{t.pricing.period}</div>
           <ul className="price-features">
             {t.pricing.basicF.map((f, i) => (

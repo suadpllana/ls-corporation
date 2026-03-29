@@ -7,7 +7,7 @@ const T = {
     hero: {
       badge: 'Website Rental for Businesses',
       h1a: 'Professional Website.',
-      h1b: 'Starting Cost: €100.',
+      h1b: 'Starting Cost: €250.',
       sub: 'LS Corporation builds, manages and optimizes your website. You only pay the monthly subscription — no upfront investment, no surprises.',
       btn1: 'View Plans →',
       btn2: 'How does it work?',
@@ -79,7 +79,7 @@ const T = {
     hero: {
       badge: 'Website Rental për Biznese Shqiptare',
       h1a: 'Website Profesional.',
-      h1b: 'Kosto Fillestare: 100€.',
+      h1b: 'Kosto Fillestare: 250€.',
       sub: 'LS Corporation ndërton, menaxhon dhe optimizon faqen tuaj web. Ju paguani vetëm abonimin mujor — pa investim fillestar, pa surpriza.',
       btn1: 'Shiko Pakot →',
       btn2: 'Si funksionon?',
