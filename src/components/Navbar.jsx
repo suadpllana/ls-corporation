@@ -31,7 +31,7 @@ export default function Navbar({ t, lang, setLang }) {
         >
           {lang === 'en' ? '🇦🇱 SQ' : '🇬🇧 EN'}
         </button>
-        <button className="nav-cta" onClick={() => scrollTo('kontakt')}>
+        <button className="nav-cta" onClick={() => scrollTo('contact')}>
           {t.nav.cta}
         </button>
       </div>
