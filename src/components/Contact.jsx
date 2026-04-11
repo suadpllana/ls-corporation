@@ -66,7 +66,7 @@ export default function Contact({ t, selectedPackage, setSelectedPackage }) {
               <div className="method-icon">📞</div>
               <div>
                 <h4>{t.contact.phoneLabel}</h4>
-                <a href="tel:+38344960113">+383 44 960 113</a>
+                <a href="tel:045244037">045 244 037</a>
               </div>
             </div>
           </div>

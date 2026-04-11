@@ -5,6 +5,8 @@ import Hero        from './components/Hero'
 import Why         from './components/Why'
 import HowItWorks  from './components/HowItWorks'
 import Pricing     from './components/Pricing'
+import Testimonials from './components/Testimonials'
+import Projects    from './components/Projects'
 import FAQ         from './components/FAQ'
 import Contact     from './components/Contact'
 import Footer      from './components/Footer'
@@ -40,6 +42,8 @@ export default function App() {
       <Why        t={t} />
       <HowItWorks t={t} />
       <Pricing    t={t} onSelectPackage={setSelectedPackage} />
+      <Testimonials t={t} />
+      <Projects   t={t} />
       <FAQ        t={t} />
       <Contact    t={t} selectedPackage={selectedPackage} setSelectedPackage={setSelectedPackage} />
       <Footer     t={t} />

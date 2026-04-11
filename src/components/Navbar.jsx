@@ -9,6 +9,8 @@ export default function Navbar({ t, lang, setLang }) {
         <li><a href="#why">{t.nav.why}</a></li>
         <li><a href="#how">{t.nav.how}</a></li>
         <li><a href="#pricing">{t.nav.pricing}</a></li>
+        <li><a href="#testimonials">{t.nav.testimonials}</a></li>
+        <li><a href="#projects">{t.nav.projects}</a></li>
         <li><a href="#faq">{t.nav.faq}</a></li>
         <li><a href="#contact">{t.nav.contact}</a></li>
       </ul>

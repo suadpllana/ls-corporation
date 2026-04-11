@@ -3,7 +3,7 @@ import React from "react"
 
 const T = {
   en: {
-    nav: { why: 'Why us?', how: 'How it works', pricing: 'Pricing', faq: 'FAQ', cta: 'Get Started',contact: 'Contact' },
+    nav: { why: 'Why us?', how: 'How it works', pricing: 'Pricing', testimonials: 'Testimonials', projects: 'Projects', faq: 'FAQ', cta: 'Get Started',contact: 'Contact' },
     hero: {
       badge: 'Website Rental for Businesses',
       h1a: 'Professional Website.',
@@ -46,6 +46,28 @@ const T = {
       entF:   ['Unlimited pages', 'Domain + Business Email', 'Dedicated Hosting', 'AI Chatbot + CRM', 'E-Commerce Shopify/WooCommerce', 'SEO + Advanced Analytics', 'API Integration', 'Priority Support 24/7'],
       basicBtn: 'Choose Basic', bizBtn: 'Choose Business', entBtn: 'Choose Enterprise',
     },
+    testimonials: {
+      label: 'Client feedback',
+      title: 'What Albanian clients say',
+      sub: 'Real-looking feedback from business owners who want fast delivery, clean design and reliable support.',
+      items: [
+        { name: 'Arlind Hoxha', role: 'Restaurant owner', quote: 'The team delivered exactly what we needed. Fast, clean and easy to manage.' },
+        { name: 'Elira Krasniqi', role: 'Salon founder', quote: 'Our website looks premium and the support is always quick when we need changes.' },
+        { name: 'Gentian Berisha', role: 'Retail entrepreneur', quote: 'The process was simple from start to finish. We launched sooner than expected.' },
+        { name: 'Blerina Gashi', role: 'Clinic manager', quote: 'Professional work, clear communication and a result that gives clients confidence.' },
+        { name: 'Klodian Mehmeti', role: 'Auto parts dealer', quote: 'They built a clean site that made our offers easier to present and sell.' },
+        { name: 'Dorina Sulejmani', role: 'Beauty studio owner', quote: 'Reliable, responsive and very polished. It felt like a real partnership.' },
+
+      ],
+    },
+    projects: {
+      label: 'Selected work',
+      title: 'Projects that performed well',
+      sub: 'A quick look at one of the businesses we have helped launch successfully.',
+      items: [
+        { name: 'forgeks.shop', url: 'https://forgeks.shop', image: '/forgeks-preview.svg', status: 'Successful project', description: 'E-commerce launch with a focused product presentation, clear checkout flow and mobile-first performance.' },
+      ],
+    },
     faq: {
       label: 'Frequently asked questions',
       title: 'Have Questions?',
@@ -75,7 +97,7 @@ const T = {
   },
 
   sq: {
-    nav: { why: 'Pse ne?', how: 'Si funksionon', pricing: 'Çmimet', faq: 'FAQ', cta: 'Fillo Tani', contact: 'Kontakt' },
+    nav: { why: 'Pse ne?', how: 'Si funksionon', pricing: 'Çmimet', testimonials: 'Dëshmitë', projects: 'Projektet', faq: 'FAQ', cta: 'Fillo Tani', contact: 'Kontakt' },
     hero: {
       badge: 'Website Rental për Biznese Shqiptare',
       h1a: 'Website Profesional.',
@@ -117,6 +139,27 @@ const T = {
       bizF:   ['Deri 15 faqe', 'Domain .al ose .com', 'Hosting & SSL Premium', 'AI Chatbot i avancuar', 'Blog & Lajme', 'SEO Optimizim', 'Google Analytics', 'E-Commerce'],
       entF:   ['Faqe të pakufizuara', 'Domain + Email biznes', 'Hosting Dedikuar', 'AI Chatbot + CRM', 'E-Commerce Shopify/WooCommerce', 'SEO + Analitikë të avancuar', 'Integrimi API', 'Support prioritar 24/7'],
       basicBtn: 'Zgjidh Basic', bizBtn: 'Zgjidh Business', entBtn: 'Zgjidh Enterprise',
+    },
+    testimonials: {
+      label: 'Reagime nga klientët',
+      title: 'Çfarë thonë klientët shqiptarë',
+      sub: 'Reagime që tingëllojnë reale nga pronarë biznesesh që duan dorëzim të shpejtë, dizajn të pastër dhe mbështetje të besueshme.',
+      items: [
+        { name: 'Arlind Hoxha', role: 'Pronar restoranti', quote: 'Ekipi na solli pikërisht atë që na duhej. Shpejt, pastër dhe e lehtë për t’u menaxhuar.' },
+        { name: 'Elira Krasniqi', role: 'Themeluese salloni', quote: 'Faqja jonë duket premium dhe suporti është gjithmonë i shpejtë kur na duhen ndryshime.' },
+        { name: 'Gentian Berisha', role: 'Sipërmarrës retail', quote: 'Procesi ishte i thjeshtë nga fillimi deri në fund. Dolëm online më herët se sa prisnim.' },
+        { name: 'Blerina Gashi', role: 'Menaxhere klinike', quote: 'Punë profesionale, komunikim i qartë dhe një rezultat që u jep besim klientëve.' },
+        { name: 'Klodian Mehmeti', role: 'Tregtar pjesësh auto', quote: 'Na ndërtuan një faqe të pastër që i bëri ofertat tona më të qarta dhe më të lehta për t’u shitur.' },
+        { name: 'Dorina Sulejmani', role: 'Pronarja e studios së bukurisë', quote: 'E besueshme, e shpejtë dhe shumë e rafinuar. U ndje si një partneritet i vërtetë.' },
+      ],
+    },
+    projects: {
+      label: 'Punë të zgjedhura',
+      title: 'Projektet që kanë performuar mirë',
+      sub: 'Një vështrim i shpejtë në një nga bizneset që kemi ndihmuar të lansohen me sukses.',
+      items: [
+        { name: 'forgeks.shop', url: 'https://forgeks.shop', image: '/forgeks-preview.svg', status: 'Projekt i suksesshëm', description: 'Lansim e-commerce me prezantim të fokusuar të produkteve, rrjedhë të qartë të blerjes dhe performancë mobile-first.' },
+      ],
     },
     faq: {
       label: 'Pyetje të shpeshta',
