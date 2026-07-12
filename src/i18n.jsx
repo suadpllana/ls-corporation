@@ -51,21 +51,26 @@ const T = {
       title: 'What Albanian clients say',
       sub: 'Real-looking feedback from business owners who want fast delivery, clean design and reliable support.',
       items: [
-        { name: 'Arlind Hoxha', role: 'Restaurant owner', quote: 'The team delivered exactly what we needed. Fast, clean and easy to manage.' },
-        { name: 'Elira Krasniqi', role: 'Salon founder', quote: 'Our website looks premium and the support is always quick when we need changes.' },
-        { name: 'Gentian Berisha', role: 'Retail entrepreneur', quote: 'The process was simple from start to finish. We launched sooner than expected.' },
-        { name: 'Blerina Gashi', role: 'Clinic manager', quote: 'Professional work, clear communication and a result that gives clients confidence.' },
-        { name: 'Klodian Mehmeti', role: 'Auto parts dealer', quote: 'They built a clean site that made our offers easier to present and sell.' },
-        { name: 'Dorina Sulejmani', role: 'Beauty studio owner', quote: 'Reliable, responsive and very polished. It felt like a real partnership.' },
+        { name: 'Arlind Hoxha', role: 'ForgeKs', quote: 'The team delivered exactly what we needed. Fast, clean and easy to manage.' },
+        { name: 'Elira Krasniqi', role: 'LodraStore', quote: 'Our website looks premium and the support is always quick when we need changes.' },
+        { name: 'Gentian Berisha', role: 'All in One Media', quote: 'The process was simple from start to finish. We launched sooner than expected.' },
+        { name: 'Olsi Gashi', role: 'SuLoCut', quote: 'Professional work, clear communication and a result that gives clients confidence.' },
+        { name: 'Klodian Mehmeti', role: 'World Cup 2026', quote: 'They built a clean site that made our offers easier to present and sell.' },
+        { name: 'Arber Sulejmani', role: 'PSG News', quote: 'Reliable, responsive and very polished. It felt like a real partnership.' },
 
       ],
     },
     projects: {
       label: 'Selected work',
       title: 'Projects that performed well',
-      sub: 'A quick look at one of the businesses we have helped launch successfully.',
+      sub: 'A quick look at a few of the businesses we have helped launch successfully.',
       items: [
-        { name: 'forgeks.shop', url: 'https://forgeks.shop', image: '/forgeks-preview.svg', status: 'Successful project', description: 'E-commerce launch with a focused product presentation, clear checkout flow and mobile-first performance.' },
+        { name: 'forgeks.shop', url: 'https://forgeks.shop', image: '/forge.png', status: 'Successful project', description: 'E-commerce launch with a focused product presentation, clear checkout flow and mobile-first performance.', testimonial: { name: 'Arlind Hoxha', role: 'Restaurant owner', quote: 'The team delivered exactly what we needed. Fast, clean and easy to manage.' } },
+        { name: 'lodra.store', url: 'https://lodra.store', image: '/image-1783864910362.png', status: 'Successful project', description: 'A sharp storefront with a modern product showcase and a clear path to purchase.', testimonial: { name: 'Elira Krasniqi', role: 'Salon founder', quote: 'Our website looks premium and the support is always quick when we need changes.' } },
+        { name: 'all-in-one-media.netlify.app', url: 'https://all-in-one-media.netlify.app/', image: '/image-1783864928510.png', status: 'Successful project', description: 'A media-focused landing page with strong visual hierarchy and clean content framing.', testimonial: { name: 'Gentian Berisha', role: 'Retail entrepreneur', quote: 'The process was simple from start to finish. We launched sooner than expected.' } },
+        { name: 'sulocut.netlify.app/home', url: 'https://sulocut.netlify.app/home', image: '/image-1783864945354.png', status: 'Successful project', description: 'A premium service site built to feel polished, calm and easy to book from any device.', testimonial: { name: 'Blerina Gashi', role: 'Clinic manager', quote: 'Professional work, clear communication and a result that gives clients confidence.' } },
+        { name: 'world-cup2026.netlify.app', url: 'https://world-cup2026.netlify.app/', image: '/image-1783864958044.png', status: 'Successful project', description: 'A tournament-style dashboard with clear navigation, match data and strong visual contrast.', testimonial: { name: 'Klodian Mehmeti', role: 'Auto parts dealer', quote: 'They built a clean site that made our offers easier to present and sell.' } },
+        { name: 'psg-news.netlify.app', url: 'https://psg-news.netlify.app/', image: '/image-1783865602026.png', status: 'Successful project', description: 'A news experience designed for quick scanning, featured stories and repeat visits.', testimonial: { name: 'Dorina Sulejmani', role: 'Beauty studio owner', quote: 'Reliable, responsive and very polished. It felt like a real partnership.' } },
       ],
     },
     faq: {
@@ -156,9 +161,14 @@ const T = {
     projects: {
       label: 'Punë të zgjedhura',
       title: 'Projektet që kanë performuar mirë',
-      sub: 'Një vështrim i shpejtë në një nga bizneset që kemi ndihmuar të lansohen me sukses.',
+      sub: 'Një vështrim i shpejtë në disa nga bizneset që kemi ndihmuar të lansohen me sukses.',
       items: [
-        { name: 'forgeks.shop', url: 'https://forgeks.shop', image: '/forgeks-preview.svg', status: 'Projekt i suksesshëm', description: 'Lansim e-commerce me prezantim të fokusuar të produkteve, rrjedhë të qartë të blerjes dhe performancë mobile-first.' },
+        { name: 'forgeks.shop', url: 'https://forgeks.shop', image: '/forgeks-preview.svg', status: 'Projekt i suksesshëm', description: 'Lansim e-commerce me prezantim të fokusuar të produkteve, rrjedhë të qartë të blerjes dhe performancë mobile-first.', testimonial: { name: 'Arlind Hoxha', role: 'Pronar restoranti', quote: 'Ekipi na solli pikërisht atë që na duhej. Shpejt, pastër dhe e lehtë për t’u menaxhuar.' } },
+        { name: 'lodra.store', url: 'https://lodra.store', image: '/image-1783864910362.png', status: 'Projekt i suksesshëm', description: 'Një vitrinë e pastër me prezantim modern të produkteve dhe një rrugë të qartë drejt blerjes.', testimonial: { name: 'Elira Krasniqi', role: 'Themeluese salloni', quote: 'Faqja jonë duket premium dhe suporti është gjithmonë i shpejtë kur na duhen ndryshime.' } },
+        { name: 'all-in-one-media.netlify.app', url: 'https://all-in-one-media.netlify.app/', image: '/image-1783864928510.png', status: 'Projekt i suksesshëm', description: 'Një faqe e fokusuar te media me hierarki të fortë vizuale dhe strukturë të pastër të përmbajtjes.', testimonial: { name: 'Gentian Berisha', role: 'Sipërmarrës retail', quote: 'Procesi ishte i thjeshtë nga fillimi deri në fund. Dolëm online më herët se sa prisnim.' } },
+        { name: 'sulocut.netlify.app/home', url: 'https://sulocut.netlify.app/home', image: '/image-1783864945354.png', status: 'Projekt i suksesshëm', description: 'Një faqe shërbimi premium, e ndërtuar për të ndierë e rafinuar, e qetë dhe e lehtë për rezervim.', testimonial: { name: 'Blerina Gashi', role: 'Menaxhere klinike', quote: 'Punë profesionale, komunikim i qartë dhe një rezultat që u jep besim klientëve.' } },
+        { name: 'world-cup2026.netlify.app', url: 'https://world-cup2026.netlify.app/', image: '/image-1783864958044.png', status: 'Projekt i suksesshëm', description: 'Një dashboard turneu me navigim të qartë, të dhëna ndeshjesh dhe kontrast të fortë vizual.', testimonial: { name: 'Klodian Mehmeti', role: 'Tregtar pjesësh auto', quote: 'Na ndërtuan një faqe të pastër që i bëri ofertat tona më të qarta dhe më të lehta për t’u shitur.' } },
+        { name: 'psg-news.netlify.app', url: 'https://psg-news.netlify.app/', image: '/image-1783865602026.png', status: 'Projekt i suksesshëm', description: 'Një përvojë lajmesh e ndërtuar për skanim të shpejtë, histori të veçuara dhe rikthime të shpeshta.', testimonial: { name: 'Dorina Sulejmani', role: 'Pronarja e studios së bukurisë', quote: 'E besueshme, e shpejtë dhe shumë e rafinuar. U ndje si një partneritet i vërtetë.' } },
       ],
     },
     faq: {
